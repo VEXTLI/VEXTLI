@@ -50,53 +50,69 @@
 <body class="bg-slate-950 text-white overflow-x-hidden">
 
     <!-- Navegación -->
-    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5">
+    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
             <div class="flex items-center gap-3">
                 <img src="logo-vextli.png" alt="Vextli Logo" class="h-10 w-auto" onerror="this.src='https://via.placeholder.com/40?text=V'">
                 <span class="text-2xl font-black tracking-tighter"></span>
             </div>
+            
+            <!-- Menú Desktop -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#inicio" class="text-sm font-medium hover:text-teal-400 transition">Inicio</a>
                 <a href="#servicios" class="text-sm font-medium hover:text-teal-400 transition">Servicios</a>
+                <a href="#prototipos" class="text-sm font-medium hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-cube"></i> Prototipos</a>
                 <a href="#faq" class="text-sm font-medium hover:text-teal-400 transition">FAQ</a>
                 <a href="#contacto" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full text-sm font-bold transition shadow-lg shadow-emerald-900/20">Cotizar ahora</a>
             </div>
+
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Panel Menú Móvil -->
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-white/5 flex-col items-center py-6 space-y-4 shadow-2xl md:hidden">
+            <a href="#inicio" class="mobile-link text-base font-medium hover:text-teal-400 transition">Inicio</a>
+            <a href="#servicios" class="mobile-link text-base font-medium hover:text-teal-400 transition">Servicios</a>
+            <a href="#prototipos" class="mobile-link text-base font-medium text-amber-400 hover:text-amber-300 transition flex items-center gap-2"><i class="fas fa-cube"></i> Prototipos 3D</a>
+            <a href="#faq" class="mobile-link text-base font-medium hover:text-teal-400 transition">FAQ</a>
+            <a href="#contacto" class="mobile-link bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3 rounded-full text-base font-bold transition mt-2">Cotizar ahora</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative pt-40 pb-20 lg:min-h-screen flex items-center">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-teal-600/20 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-20 right-10 w-72 h-72 bg-amber-600/20 rounded-full blur-[120px]"></div>
+    <section id="inicio" class="relative pt-32 pb-16 md:pt-40 md:pb-20 lg:min-h-screen flex items-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
+            <div class="absolute top-20 left-4 md:left-10 w-48 md:w-72 h-48 md:h-72 bg-teal-600/20 rounded-full blur-[80px] md:blur-[120px]"></div>
+            <div class="absolute bottom-20 right-4 md:right-10 w-48 md:w-72 h-48 md:h-72 bg-amber-600/20 rounded-full blur-[80px] md:blur-[120px]"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div class="text-center lg:text-left">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-bold uppercase tracking-widest mb-6">Innovación en Querétaro</span>
-                <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter uppercase italic">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-6">Innovación en Querétaro</span>
+                <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 md:mb-8 leading-tight tracking-tighter uppercase italic">
                     Tu Marca. <br><span class="text-gradient">Sin Límites.</span>
                 </h1>
-                <p class="text-xl text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed italic">
+                <p class="text-base md:text-xl text-slate-400 mb-8 md:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed italic">
                     "La marca que no se toca, se olvida. Nosotros la hacemos inolvidable." Calidad de impresión 3D con tecnología NFC.
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <a href="#contacto" class="px-10 py-5 bg-white text-slate-950 rounded-2xl font-black text-lg hover:scale-105 transition shadow-2xl">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contacto" class="px-8 md:px-10 py-4 md:py-5 bg-white text-slate-950 rounded-2xl font-black text-base md:text-lg hover:scale-105 transition shadow-2xl">
                         Cotizar mis Vextli
                     </a>
-                    <a href="#demo" class="px-10 py-5 border border-white/10 bg-white/5 rounded-2xl font-bold hover:bg-white/10 transition">
+                    <a href="#demo" class="px-8 md:px-10 py-4 md:py-5 border border-white/10 bg-white/5 rounded-2xl font-bold hover:bg-white/10 transition text-base md:text-lg">
                         Ver Demo Digital
                     </a>
                 </div>
             </div>
             
-            <div class="flex justify-center relative">
-                <div class="floating relative w-80 h-80 md:w-[450px] md:h-[450px] bg-slate-900 border border-white/10 rounded-[4rem] shadow-2xl flex items-center justify-center overflow-hidden">
+            <div class="flex justify-center relative mt-10 lg:mt-0">
+                <div class="floating relative w-64 h-64 sm:w-80 sm:h-80 md:w-[450px] md:h-[450px] bg-slate-900 border border-white/10 rounded-[3rem] md:rounded-[4rem] shadow-2xl flex items-center justify-center overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-tr from-teal-500/10 to-transparent"></div>
-                    <div class="text-center p-8">
-                        <img src="logo2-vextli.png" alt="Vextli Logo" class="custom-logo mx-auto mb-6" onerror="this.src='https://via.placeholder.com/300?text=VEXTLI'">
-                        <h2 class="font-black text-4xl tracking-[0.3em] uppercase opacity-80"></h2>
+                    <div class="text-center p-6 md:p-8">
+                        <img src="logo2-vextli.png" alt="Vextli Logo" class="custom-logo mx-auto mb-6 max-h-40 md:max-h-full" onerror="this.src='https://via.placeholder.com/300?text=VEXTLI'">
                     </div>
                 </div>
             </div>
@@ -104,36 +120,35 @@
     </section>
 
     <!-- Opciones de Servicio -->
-    <section id="servicios" class="py-32 bg-slate-900/30">
+    <section id="servicios" class="py-20 md:py-32 bg-slate-900/30">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tight">Ecosistema <span class="text-teal-400 italic">Vextli</span></h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Selecciona el nivel de integración que tu marca necesita.</p>
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight">Ecosistema <span class="text-teal-400 italic">Vextli</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">Selecciona el nivel de integración que tu marca necesita.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Solo Impresión -->
-                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-t-slate-500">
-                    <div class="w-14 h-14 bg-slate-600/20 text-slate-400 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                <div class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border-t-4 border-t-slate-500">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-slate-600/20 text-slate-400 rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-6 md:mb-8">
                         <i class="fas fa-cube"></i>
                     </div>
-                    <h3 class="text-2xl font-black mb-4 uppercase">Solo 3D</h3>
-                    <p class="text-slate-400 mb-8 italic text-sm">"Identidad física premium en relieve, sin funciones digitales."</p>
-                    <ul class="space-y-4 mb-10 text-sm">
+                    <h3 class="text-xl md:text-2xl font-black mb-4 uppercase">Solo 3D</h3>
+                    <p class="text-slate-400 mb-8 italic text-xs md:text-sm">"Identidad física premium en relieve, sin funciones digitales."</p>
+                    <ul class="space-y-4 mb-8 md:mb-10 text-xs md:text-sm">
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-slate-500"></i> Modelado de logo profesional</li>
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-slate-500"></i> Polímero resistente al uso</li>
-                      
                     </ul>
                 </div>
 
                 <!-- Estándar -->
-                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-t-teal-500">
-                    <div class="w-14 h-14 bg-teal-600/20 text-teal-400 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                <div class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border-t-4 border-t-teal-500">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-teal-600/20 text-teal-400 rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-6 md:mb-8">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3 class="text-2xl font-black mb-4 uppercase">Smart Link</h3>
-                    <p class="text-slate-400 mb-8 italic text-sm">"Lleva a tus clientes a un destino digital con un solo toque."</p>
-                    <ul class="space-y-4 mb-10 text-sm">
+                    <h3 class="text-xl md:text-2xl font-black mb-4 uppercase">Smart Link</h3>
+                    <p class="text-slate-400 mb-8 italic text-xs md:text-sm">"Lleva a tus clientes a un destino digital con un solo toque."</p>
+                    <ul class="space-y-4 mb-8 md:mb-10 text-xs md:text-sm">
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check-circle text-teal-500"></i> Chip NFC integrado e invisible</li>
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check-circle text-teal-500"></i> Enlace directo (WhatsApp/Web/Etc)</li>
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check-circle text-teal-500"></i> Listo para conectar</li>
@@ -141,13 +156,13 @@
                 </div>
 
                 <!-- Premium -->
-                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-t-amber-500 bg-amber-500/[0.03]">
-                    <div class="w-14 h-14 bg-amber-600/20 text-amber-400 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                <div class="glass-card p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border-t-4 border-t-amber-500 bg-amber-500/[0.03]">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-amber-600/20 text-amber-400 rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-6 md:mb-8">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3 class="text-2xl font-black mb-4 uppercase">Bio Page Pro</h3>
-                    <p class="text-slate-400 mb-8 italic text-sm">"Tu web digital completa, interactiva y profesional."</p>
-                    <ul class="space-y-4 mb-10 text-sm">
+                    <h3 class="text-xl md:text-2xl font-black mb-4 uppercase">Bio Page Pro</h3>
+                    <p class="text-slate-400 mb-8 italic text-xs md:text-sm">"Tu web digital completa, interactiva y profesional."</p>
+                    <ul class="space-y-4 mb-8 md:mb-10 text-xs md:text-sm">
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-star text-amber-500"></i> Mini-Web Vextli personalizada</li>
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-star text-amber-500"></i> Botón de guardado de contacto</li>
                         <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-star text-amber-500"></i> Múltiples enlaces editables</li>
@@ -157,19 +172,44 @@
         </div>
     </section>
 
+    <!-- NUEVA SECCIÓN: Visor de Prototipos -->
+    <section id="prototipos" class="py-20 md:py-32 relative overflow-hidden bg-slate-950">
+        <!-- Fondo decorativo -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-amber-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400/20 to-orange-500/20 text-amber-400 mb-8 text-2xl border border-amber-500/20 shadow-[0_0_30px_rgba(251,191,36,0.15)]">
+                <i class="fas fa-cubes"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter italic">
+                Tu Logo <span class="text-amber-500">Cobra Vida</span>
+            </h2>
+            
+            <p class="text-slate-400 text-base md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                ¿Ya tienes un proyecto en curso con nosotros? Ingresa a nuestro portal interactivo exclusivo para clientes y visualiza el modelo 3D de tu marca desde cualquier ángulo antes de la producción física.
+            </p>
+            
+            <!-- AQUI PONES EL LINK A TU OTRA PÁGINA REEMPLAZANDO href="tu-pagina-de-prototipos.html" -->
+            <a href="https://vextli.github.io/visor3d/" target="_blank" class="inline-flex items-center gap-3 px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 rounded-full font-black text-base md:text-lg transition-all shadow-[0_0_40px_rgba(245,158,11,0.3)] hover:shadow-[0_0_60px_rgba(245,158,11,0.5)] hover:-translate-y-1">
+                Abrir Visualizador 3D <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
     <!-- FAQ -->
-    <section id="faq" class="py-32 bg-slate-950">
+    <section id="faq" class="py-20 md:py-32 bg-slate-900/20">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-5xl font-black uppercase mb-4 tracking-tighter italic">Preguntas <span class="text-teal-400">Frecuentes</span></h2>
-                <p class="text-slate-500">Todo lo que necesitas saber sobre tu Vextli.</p>
+                <p class="text-slate-500 text-sm md:text-base">Todo lo que necesitas saber sobre tu Vextli.</p>
             </div>
             
             <div class="space-y-4">
-                <details class="glass-card rounded-3xl p-6 group cursor-pointer" open>
+                <details class="glass-card rounded-[2rem] p-6 group cursor-pointer" open>
                     <summary class="flex items-center justify-between list-none">
-                        <span class="text-lg font-bold">¿Cómo funciona el NFC?</span>
-                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-open:rotate-180 transition-transform">
+                        <span class="text-base md:text-lg font-bold">¿Cómo funciona el NFC?</span>
+                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-open:rotate-180 transition-transform flex-shrink-0 ml-4">
                             <i class="fas fa-chevron-down text-xs text-teal-400"></i>
                         </div>
                     </summary>
@@ -178,10 +218,10 @@
                     </div>
                 </details>
 
-                <details class="glass-card rounded-3xl p-6 group cursor-pointer">
+                <details class="glass-card rounded-[2rem] p-6 group cursor-pointer">
                     <summary class="flex items-center justify-between list-none">
-                        <span class="text-lg font-bold">¿Es compatible con mi teléfono?</span>
-                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-open:rotate-180 transition-transform">
+                        <span class="text-base md:text-lg font-bold">¿Es compatible con mi teléfono?</span>
+                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-open:rotate-180 transition-transform flex-shrink-0 ml-4">
                             <i class="fas fa-chevron-down text-xs text-teal-400"></i>
                         </div>
                     </summary>
@@ -190,10 +230,10 @@
                     </div>
                 </details>
 
-                <details class="glass-card rounded-3xl p-6 group cursor-pointer">
+                <details class="glass-card rounded-[2rem] p-6 group cursor-pointer">
                     <summary class="flex items-center justify-between list-none">
-                        <span class="text-lg font-bold">¿Qué incluye la opción "Sin NFC"?</span>
-                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-open:rotate-180 transition-transform">
+                        <span class="text-base md:text-lg font-bold">¿Qué incluye la opción "Sin NFC"?</span>
+                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-open:rotate-180 transition-transform flex-shrink-0 ml-4">
                             <i class="fas fa-chevron-down text-xs text-teal-400"></i>
                         </div>
                     </summary>
@@ -206,69 +246,101 @@
     </section>
 
     <!-- Demo Mockup -->
-    <section id="demo" class="py-32 bg-slate-900/20">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
-            <div class="lg:w-1/2">
-                <h2 class="text-4xl md:text-6xl font-black mb-8 italic uppercase tracking-tighter">Tu marca en su <span class="text-amber-500">bolsillo.</span></h2>
-                <p class="text-xl text-slate-400 mb-8 leading-relaxed italic">
+    <section id="demo" class="py-20 md:py-32 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 md:gap-20">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-black mb-6 md:mb-8 italic uppercase tracking-tighter">Tu marca en su <span class="text-amber-500">bolsillo.</span></h2>
+                <p class="text-base md:text-xl text-slate-400 mb-8 leading-relaxed italic max-w-lg mx-auto lg:mx-0">
                     Con Vextli Premium, pasar tu contacto es tan fácil como un choque de manos. Profesional, rápido e innovador.
                 </p>
-                <div class="flex gap-4">
-                    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 flex-1 text-center">
-                        <i class="fas fa-mobile-screen text-teal-400 mb-2"></i>
-                        <p class="text-xs uppercase font-bold tracking-widest">Sin Apps</p>
+                <div class="flex flex-wrap sm:flex-nowrap gap-4 justify-center lg:justify-start">
+                    <div class="p-4 md:p-6 bg-white/5 rounded-2xl border border-white/10 w-full sm:flex-1 text-center">
+                        <i class="fas fa-mobile-screen text-teal-400 mb-2 text-xl md:text-2xl"></i>
+                        <p class="text-[10px] md:text-xs uppercase font-bold tracking-widest">Sin Apps</p>
                     </div>
-                    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 flex-1 text-center">
-                        <i class="fas fa-address-card text-teal-400 mb-2"></i>
-                        <p class="text-xs uppercase font-bold tracking-widest">Contacto VCF</p>
+                    <div class="p-4 md:p-6 bg-white/5 rounded-2xl border border-white/10 w-full sm:flex-1 text-center">
+                        <i class="fas fa-address-card text-teal-400 mb-2 text-xl md:text-2xl"></i>
+                        <p class="text-[10px] md:text-xs uppercase font-bold tracking-widest">Contacto VCF</p>
                     </div>
                 </div>
             </div>
 
-            <div class="lg:w-1/2 flex justify-center">
-                <div class="phone-mockup w-80 h-[640px] bg-black rounded-[3.5rem] border-[12px] border-slate-900 relative overflow-hidden ring-1 ring-white/10">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-8 bg-black rounded-b-2xl z-20"></div>
-                    <iframe src="biopage.html" class="w-full h-full border-none"></iframe>
+            <div class="lg:w-1/2 flex justify-center w-full">
+                <!-- Se ajustó el tamaño para que no se desborde en móviles -->
+                <div class="phone-mockup w-[280px] sm:w-80 h-[560px] sm:h-[640px] bg-black rounded-[3rem] sm:rounded-[3.5rem] border-[8px] sm:border-[12px] border-slate-900 relative overflow-hidden ring-1 ring-white/10">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-32 h-6 sm:h-8 bg-black rounded-b-xl sm:rounded-b-2xl z-20"></div>
+                    <iframe src="biopage.html" class="w-full h-full border-none bg-slate-900"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Cotización -->
-    <section id="contacto" class="py-32">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-gradient-to-br from-teal-900/20 to-slate-950 rounded-[3rem] p-12 border border-white/10 shadow-2xl">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-black mb-4 italic uppercase">Inicia tu pedido</h2>
-                    <p class="text-slate-400">Cuéntanos tu idea y nos pondremos en contacto contigo.</p>
+    <section id="contacto" class="py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-gradient-to-br from-teal-900/20 to-slate-950 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 border border-white/10 shadow-2xl">
+                <div class="text-center mb-10 md:mb-12">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 italic uppercase">Inicia tu pedido</h2>
+                    <p class="text-slate-400 text-sm md:text-base">Cuéntanos tu idea y nos pondremos en contacto contigo.</p>
                 </div>
-                <form id="contactForm" class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="name" placeholder="Tu Nombre" required class="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-teal-500 outline-none transition">
-                    <input type="number" id="quantity" placeholder="Piezas aproximadas" required class="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-teal-500 outline-none transition">
-                    <select id="service" class="bg-slate-900 border border-white/10 rounded-2xl px-6 py-4 focus:border-teal-500 outline-none appearance-none md:col-span-2">
+                <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <input type="text" id="name" placeholder="Tu Nombre" required class="bg-white/5 border border-white/10 rounded-2xl px-5 md:px-6 py-4 focus:border-teal-500 outline-none transition text-sm md:text-base">
+                    <input type="number" id="quantity" placeholder="Piezas aproximadas" required class="bg-white/5 border border-white/10 rounded-2xl px-5 md:px-6 py-4 focus:border-teal-500 outline-none transition text-sm md:text-base">
+                    <select id="service" class="bg-slate-900 border border-white/10 rounded-2xl px-5 md:px-6 py-4 focus:border-teal-500 outline-none appearance-none md:col-span-2 text-sm md:text-base">
                         <option value="Premium Bio Page">Plan Premium (Bio Page NFC)</option>
                         <option value="Estándar Directo">Plan Estándar (Enlace Directo NFC)</option>
                         <option value="Solo Impresión 3D">Solo Impresión 3D (Sin NFC)</option>
                     </select>
-                    <textarea id="details" placeholder="Háblanos de tu marca o logotipo..." class="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-teal-500 outline-none transition md:col-span-2 h-32"></textarea>
-                    <button type="submit" class="md:col-span-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xl py-6 rounded-2xl shadow-xl transition active:scale-95 flex items-center justify-center gap-3 uppercase">
-                        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                    <textarea id="details" placeholder="Háblanos de tu marca o logotipo..." class="bg-white/5 border border-white/10 rounded-2xl px-5 md:px-6 py-4 focus:border-teal-500 outline-none transition md:col-span-2 h-32 text-sm md:text-base resize-none"></textarea>
+                    <button type="submit" class="md:col-span-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-lg md:text-xl py-5 md:py-6 rounded-2xl shadow-xl transition active:scale-95 flex items-center justify-center gap-3 uppercase">
+                        <i class="fab fa-whatsapp text-2xl"></i> Enviar por WhatsApp
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="flex items-center justify-center gap-2 mb-8 opacity-40 grayscale">
-            <img src="logo-vextli.png" alt="Logo" class="h-8" onerror="this.style.display='none'">
-            <span class="text-xl font-black tracking-tighter">VEXTLI</span>
+    <footer class="py-12 md:py-20 border-t border-white/5 text-center">
+        <div class="flex items-center justify-center gap-2 mb-6 md:mb-8 opacity-40 grayscale">
+            <img src="logo-vextli.png" alt="Logo" class="h-6 md:h-8" onerror="this.style.display='none'">
+            <span class="text-lg md:text-xl font-black tracking-tighter">VEXTLI</span>
         </div>
-        <p class="text-slate-600 text-[10px] tracking-[0.5em] uppercase mb-4">Queretaro • Mexico • 3D Printing</p>
-        <p class="text-slate-800 text-[9px] uppercase font-bold">&copy; 2026 VEXTLI Solutions. Todos los derechos reservados.</p>
+        <p class="text-slate-600 text-[9px] md:text-[10px] tracking-[0.3em] md:tracking-[0.5em] uppercase mb-3 md:mb-4">Queretaro • Mexico • 3D Printing</p>
+        <p class="text-slate-800 text-[8px] md:text-[9px] uppercase font-bold">&copy; 2026 VEXTLI Solutions. Todos los derechos reservados.</p>
     </footer>
 
     <script>
+        // Funcionalidad del Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            // Cambiar el icono de hamburguesa a una "X"
+            const icon = mobileMenuBtn.querySelector('i');
+            if(mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Cerrar el menú al hacer clic en un enlace
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Funcionalidad del Formulario de WhatsApp
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
@@ -282,5 +354,4 @@
     </script>
 
 </body>
-
 </html>
